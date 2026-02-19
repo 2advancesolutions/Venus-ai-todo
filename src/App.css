@@ -62,6 +62,43 @@
   font-size: 1.1rem;
 }
 
+.loading-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #667eea;
+  font-size: 1.1rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.error-state {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.error-state p:first-child {
+  color: #ff4444;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.error-state p:last-child {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 @media (max-width: 600px) {
   .app-header h1 {
     font-size: 2rem;
@@ -93,5 +130,13 @@
   
   .empty-state {
     color: #666;
+  }
+  
+  .loading-state {
+    color: #667eea;
+  }
+  
+  .error-state {
+    background: rgba(255, 68, 68, 0.05);
   }
 }
